@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke Tests" parallel="classes" thread-count="3">
+  <test name="Driver Smoke">
+    <packages>
+      <package name="Driver.Smoke"/>
+    </packages>
+  </test>
+  <test name="Rider Smoke">
+    <packages>
+      <package name="Rider.Smoke"/>
+    </packages>
+  </test>
+</suite>

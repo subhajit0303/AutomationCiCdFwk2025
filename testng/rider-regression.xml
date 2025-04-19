@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Rider Regression" parallel="classes" thread-count="4">
+  <test name="Rider Tests">
+    <packages>
+      <package name="Rider.Regression"/>
+    </packages>
+  </test>
+</suite>
