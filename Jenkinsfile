@@ -13,7 +13,7 @@ pipeline {
                 stage('Smoke Tests') {
                     agent {
                         docker {
-                            image 'seleniarm/standalone-chrome:latest' // ARM-compatible
+                            image 'seleniarm/standalone-chromium:latest' // ARM-compatible
                             args '--shm-size=2g --cpus 2 -v /dev/shm:/dev/shm'
                             label 'm1-agent'
                         }
@@ -28,7 +28,7 @@ pipeline {
                 stage('Driver Regression') {
                     agent {
                         docker {
-                            image 'seleniarm/standalone-chrome:latest'
+                            image 'seleniarm/standalone-chromium:latest'
                             args '--shm-size=3g --cpus 3' // More resources for regression
                             label 'm1-agent'
                         }
@@ -43,7 +43,7 @@ pipeline {
                 stage('Rider Regression') {
                     agent {
                         docker {
-                            image 'seleniarm/standalone-chrome:latest'
+                            image 'seleniarm/standalone-chromium:latest'
                             args '--shm-size=3g --cpus 3'
                             label 'm1-agent'
                         }
